@@ -17,7 +17,7 @@ defmodule Wormhole.CallbackWrapper do
         end
       catch _key, error ->
         stack = System.stacktrace
-        exit {:shutdown, error, stacktrace}
+        exit {:shutdown, error, stack}
       end
     end
   end
